@@ -1,0 +1,41 @@
+Diese Dokumentation fasst die wesentlichen Konzepte der HTTP-Vernetzung, REST-APIs und deren Implementierung in JavaScript zusammen, wie sie im Kurs von Lane Wagner dargelegt wurden.
+
+### 1. Grundlagen von HTTP und Protokollen
+**HTTP (Hypertext Transfer Protocol)** ist das Rückgrat des modernen Web und das am häufigsten verwendete Protokoll für die Online-Kommunikation.
+*   **Definition eines Protokolls:** Ein Protokoll ist ein einfacher Satz von Regeln, auf die sich zwei Computer geeinigt haben, um Informationen über ein Netzwerk auszutauschen.
+*   **Das Client-Server-Modell:** HTTP basiert auf einem **Request-Response-System**. Der **Client** (meist das Frontend, wie ein Browser oder eine App) sendet eine Anfrage, und der **Server** (das Backend) verarbeitet diese und sendet eine Antwort zurück.
+
+### 2. Adressierung im Web: URLs, IP und DNS
+Um einen Server im Internet zu finden, werden verschiedene Identifikationssysteme genutzt:
+*   **IP-Adressen:** Jedes Gerät im Internet hat eine eindeutige Adresse (z. B. IPv4 wie `8.13.156.7` oder das neuere IPv6).
+*   **DNS (Domain Name System):** Da IP-Adressen für Menschen schwer zu merken sind, übersetzt das DNS menschenlesbare Domainnamen (wie `amazon.com`) in IP-Adressen. Die Organisation **ICANN** verwaltet dieses System weltweit.
+*   **URL-Anatomie:** Eine URL besteht aus bis zu acht Teilen, darunter das Protokoll (z. B. `https`), die Domain, der Pfad (Ressourcenort) und Query-Parameter (für Filter oder Suchen).
+
+### 3. Datenformat und Kommunikation
+*   **JSON (JavaScript Object Notation):** Dies ist der Standard für den Datenaustausch zwischen Client und Server. Es handelt sich um ein textbasiertes Format aus Schlüssel-Wert-Paaren, das für viele Programmiersprachen lesbar ist.
+*   **HTTP-Header:** Header enthalten Metadaten über die Anfrage oder Antwort, wie den `Content-Type` (z. B. `application/json`) oder Informationen zur Authentifizierung (z. B. API-Keys).
+*   **HTTP-Statuscodes:** Diese dreistelligen Nummern informieren über das Ergebnis einer Anfrage.
+    *   **200er (Erfolg):** Alles okay.
+    *   **300er (Umleitung):** Die Ressource ist woanders.
+    *   **400er (Client-Fehler):** Fehlerhafte Anfrage oder fehlende Berechtigung (z. B. 404 Not Found).
+    *   **500er (Server-Fehler):** Problem auf der Serverseite.
+
+### 4. HTTP-Methoden und CRUD
+Moderne APIs nutzen spezifische Methoden, um Aktionen an Ressourcen durchzuführen, was oft als **CRUD** bezeichnet wird:
+*   **GET (Read):** Ruft Daten ab, ohne sie zu verändern.
+*   **POST (Create):** Erstellt eine neue Ressource auf dem Server.
+*   **PUT (Update):** Aktualisiert eine bestehende Ressource vollständig und ist im Idealfall idempotent.
+*   **DELETE (Delete):** Entfernt eine Ressource.
+
+### 5. Asynchrone Programmierung in JavaScript
+Da Netzwerkanfragen Zeit benötigen (I/O-Operationen), müssen sie asynchron verarbeitet werden, damit die Anwendung nicht blockiert.
+*   **Promises:** Ein Objekt, das den zukünftigen Erfolg oder das Scheitern einer Operation darstellt (Zustände: pending, fulfilled, rejected).
+*   **Fetch API:** Die standardmäßige JavaScript-Funktion zum Senden von HTTP-Anfragen, die ein Promise zurückgibt.
+*   **Async/Await:** Eine moderne Syntax, die asynchronen Code wie synchronen Code aussehen lässt und so die Lesbarkeit verbessert.
+*   **Fehlerbehandlung:** Mit **Try-Catch-Blöcken** können Laufzeitfehler (wie eine fehlende Internetverbindung) abgefangen werden, um einen Programmabsturz zu verhindern.
+
+### 6. Sicherheit mit HTTPS
+**HTTPS** ist die verschlüsselte Version von HTTP.
+*   **Verschlüsselung:** Durch SSL/TLS-Protokolle werden Daten für Dritte unlesbar gemacht.
+*   **Zertifizierung:** Es stellt sicher, dass der Client tatsächlich mit dem beabsichtigten Server kommuniziert (Identitätsprüfung).
+*   **Schlüsselsystem:** Es nutzt asymmetrische Kryptografie (Public & Private Keys), um einen gemeinsamen symmetrischen Sitzungsschlüssel auszuhandeln.
