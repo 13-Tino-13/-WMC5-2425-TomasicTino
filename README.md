@@ -16,7 +16,7 @@ Documented my progress by creating summaries and programming the examples.
    | Task      | Duration| Progress (in %) | Completed |
    |-----------|-----------|-----------|-----------|
    | [Article: What is HTTP](https://www.freecodecamp.org/news/what-is-http/) |    1h      | 100 %        |yes       |
-   | [Full HTTP Networking Course – Fetch and REST APIs in JavaScript](https://www.youtube.com/watch?v=2JYT5f2isg4)|   5h 9min       | 0 % or "h min"       |yes/no       |
+   | [Full HTTP Networking Course – Fetch and REST APIs in JavaScript](https://www.youtube.com/watch?v=2JYT5f2isg4)|   5h 9min       | 100 %        |yes       |
 
 3. Watch the following videos about basic JavaScript techniques for web development
 
