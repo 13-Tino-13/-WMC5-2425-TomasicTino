@@ -1,0 +1,64 @@
+# What is HTTP? Protocol Overview for Beginners
+
+HTTP (Hypertext Transfer Protocol) is the core protocol that enables communication on the World Wide Web. It allows clients, such as web browsers or mobile apps, to communicate with servers in order to request and receive data like web pages, images, or JSON responses. Without HTTP, modern web browsing with URLs and hyperlinks would not be possible.
+
+## The HTTP Request–Response Cycle
+
+HTTP communication is based on a request–response cycle:
+1. A client sends an HTTP request to a server.
+2. The server processes the request.
+3. The server sends back an HTTP response.
+4. The client receives and displays or processes the response.
+5. This cycle can repeat multiple times as needed.
+
+Each request is independent, meaning HTTP is stateless by default.
+
+## HTTP Requests
+
+An HTTP request consists of:
+- A **URL** that identifies the resource.
+- An **HTTP method** that defines the action.
+- **Request headers** that provide additional information.
+- An optional **request body** containing data sent to the server.
+
+### HTTP Request Methods
+
+Common HTTP methods include:
+- **GET** – Retrieves a resource.
+- **POST** – Creates a new resource.
+- **PUT** – Updates an existing resource.
+- **DELETE** – Removes a resource.
+- **HEAD** – Retrieves only headers, not the body.
+
+### HTTP Request Headers
+
+Headers are key–value pairs that provide context for the request. Examples include:
+- **Host** – The target server.
+- **User-Agent** – Information about the client.
+- **Accept** – Accepted response formats.
+- **Authorization** – Credentials or tokens.
+- **Content-Type** – Format of the request body.
+
+### HTTP Request Body
+
+The request body is used mainly with POST or PUT requests to send data such as form data or files (for example, uploading an image using `multipart/form-data`).
+
+## HTTP Responses
+
+An HTTP response sent by the server includes:
+- A **status line** with the HTTP version and status code.
+- **Response headers** with metadata.
+- A **response body** containing the requested data.
+
+### Common HTTP Status Codes
+
+- **200 OK** – Request successful.
+- **201 Created** – Resource successfully created.
+- **301 Moved Permanently** – Resource moved to a new URL.
+- **404 Not Found** – Resource not found.
+- **500 Internal Server Error** – Server error occurred.
+
+## Conclusion
+
+HTTP is the foundation of web communication and is used by nearly all web technologies and APIs. Understanding how HTTP requests, responses, headers, methods, and status codes work is essential for anyone learning web development or working with web applications.
+
