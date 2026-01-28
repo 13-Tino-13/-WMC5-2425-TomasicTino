@@ -1,1 +1,38 @@
+# Kurzdokumentation – Kurs „Learn JavaScript“
+
+## 1. Einleitung
+Der Online-Kurs **„Learn JavaScript“** vermittelt die Grundlagen der Programmiersprache **JavaScript**, die vor allem dafür verwendet wird, **Webseiten interaktiv** zu machen. Der Kurs ist als **einsteigerfreundlich** gekennzeichnet und ist so aufgebaut, dass Theorie und Praxis kombiniert werden.
+
+## 2. Zielgruppe
+Der Kurs richtet sich an:
+- Einsteiger*innen ohne oder mit wenig Programmiererfahrung
+- Lernende, die Webentwicklung lernen möchten
+- Personen, die JavaScript-Grundlagen für Schule/Projekte/Portfolio brauchen
+
+## 3. Voraussetzungen
+- Grundlegende Computerkenntnisse
+- Optional hilfreich: Basiswissen in **HTML/CSS**, ist aber nicht zwingend erforderlich
+
+## 4. Kursaufbau und Inhalte
+Der Kurs besteht aus:
+- **11 Lektionen (Lessons)**: Vermittlung von Grundlagen und Kernkonzepten
+- **12 Projekten (Projects)**: Anwendung des Gelernten in praxisnahen Aufgaben
+
+Typische Themen, die in einem JavaScript-Grundkurs abgedeckt werden:
+- Syntax und grundlegende Datentypen
+- Variablen und Operatoren
+- Bedingungen (z. B. `if/else`)
+- Schleifen (z. B. `for`, `while`)
+- Funktionen und einfache Programmlogik
+- erste Schritte zu Interaktivität im Web (z. B. Reaktionen auf Benutzeraktionen)
+
+## 5. Lernmethoden und Funktionen im Kurs
+Der Kurs bietet mehrere Funktionen zur Unterstützung des Lernens:
+- **Resume course**: Fortsetzen an der zuletzt bearbeiteten Stelle
+- **Start practice session**: Start einer Übungseinheit zum Wiederholen/Trainieren
+- **Course Progress**: Fortschrittsanzeige (im gezeigten Stand **100%**)
+- **Reset progress**: Zurücksetzen des Fortschritts, um Inhalte erneut zu bearbeiten
+
+## 6. Abschluss und Nachweis
+Nach dem Abschluss besteht die Möglichkeit, ein **Certificate of Completion** (Abschlusszertifikat) zu erhalten. Dieses kann als Nachweis für die erfolgreich bearbeiteten Inhalte und Projekte dienen.
 
