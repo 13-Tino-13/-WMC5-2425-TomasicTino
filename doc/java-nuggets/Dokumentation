@@ -1,1 +1,41 @@
+Diese Dokumentation fasst die wichtigsten Konzepte zur asynchronen Programmierung in JavaScript zusammen, basierend auf der Videoreihe „Javascript Nuggets“. Sie zeigt die Entwicklung von einfachen **Callbacks** über die Problematik der **Callback Hell** bis hin zu modernen Lösungen wie **Promises** und **Async/Await**.
+
+### 1. Callback-Funktionen
+Eine **Callback-Funktion** ist eine Funktion, die als Argument an eine andere Funktion übergeben und zu einem späteren Zeitpunkt ausgeführt wird.
+
+*   **Grundkonzept:** Anstatt eine Funktion sofort auszuführen, wird sie referenziert und innerhalb des Bodys der Hauptfunktion aufgerufen.
+*   **Flexibilität:** Callbacks machen Anwendungen flexibler, da unterschiedliche Logiken (z. B. Text in Großbuchstaben umwandeln oder umkehren) an dieselbe Verarbeitungsfunktion übergeben werden können.
+*   **Wichtige Anwendungsbereiche:** Sie sind in JavaScript allgegenwärtig, insbesondere bei **Array-Methoden** (map, filter), **Timeouts** (setTimeout) und **Event-Listenern**.
+*   **Häufiger Fehler:** Man darf die Funktion beim Übergeben nicht direkt aufrufen (mit Klammern `()`), da sie sonst sofort ausgeführt wird, anstatt erst später im Funktionskörper.
+
+### 2. Callback Hell (Die „Pyramiden-Struktur“)
+Wenn mehrere asynchrone Operationen strikt nacheinander ausgeführt werden müssen (sequenziell), führt dies oft zur sogenannten **Callback Hell**.
+
+*   **Das Problem:** Um die Reihenfolge zu garantieren, müssen Funktionen tief ineinander verschachtelt werden, was zu einer unübersichtlichen, pyramidenartigen Codestruktur führt.
+*   **Wartbarkeit:** Dieser Code ist extrem schwer zu verwalten und zu lesen, selbst bei einfachen Aufgaben wie dem zeitversetzten Ändern von Textfarben im DOM.
+
+### 3. Promises: Die Lösung gegen Verschachtelung
+Ein **Promise** ist ein Objekt, das einen Wert repräsentiert, den man in der Zukunft erwartet (analog zu einem Beleg in einem Fast-Food-Restaurant).
+
+*   **Zustände eines Promises:**
+    *   **Pending:** Der Ausgangszustand (wartend).
+    *   **Fulfilled (Resolved):** Die Operation war erfolgreich.
+    *   **Rejected:** Es trat ein Fehler auf.
+*   **Erstellung:** Ein Promise wird über einen Konstruktor erstellt, der eine Funktion mit den Argumenten `resolve` und `reject` erhält.
+*   **Konsumierung:**
+    *   `.then()` wird verwendet, um auf das erfolgreiche Ergebnis zuzugreifen.
+    *   `.catch()` dient dem Abfangen von Fehlern.
+*   **Vorteil:** Durch das Zurückgeben eines neuen Promises in einem `.then()`-Block können Promises **gekettet** werden, was den Code flacher und lesbarer macht als verschachtelte Callbacks.
+
+### 4. Async / Await: Synchroner Stil für asynchronen Code
+**Async/Await** bietet eine noch sauberere Syntax, um asynchronen Code so zu schreiben, dass er wie synchroner Code aussieht.
+
+*   **Regeln:**
+    *   `await` kann nur innerhalb einer Funktion verwendet werden, die mit dem Keyword `async` markiert ist.
+    *   Eine `async`-Funktion gibt **immer** ein Promise zurück.
+*   **Funktionsweise:** `await` pausiert die Ausführung der Funktion, bis das Promise „settled“ (erfüllt oder abgelehnt) ist.
+*   **Fehlerbehandlung:** Anstatt `.catch()` verwendet man bei Async/Await üblicherweise **try-catch-Blöcke**, um Fehler elegant abzufangen.
+*   **Fazit:** Es ist heutzutage die bevorzugte Methode für asynchrone Aufgaben, da es die Lesbarkeit drastisch erhöht und die Logik (z. B. „Hole User, dann hole dessen Artikel“) intuitiv abbildet.
+
+---
 
